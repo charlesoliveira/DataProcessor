@@ -5,7 +5,6 @@ import org.example.game.utils.Carta;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Mesa {
 
 	private final List<Carta> cartaList;

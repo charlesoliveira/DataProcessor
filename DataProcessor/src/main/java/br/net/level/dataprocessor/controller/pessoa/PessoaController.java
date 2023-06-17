@@ -3,6 +3,7 @@ package br.net.level.dataprocessor.controller.pessoa;
 import br.net.level.dataprocessor.domain.usecase.BuscarListagemPessoasUseCase;
 import br.net.level.dataprocessor.domain.usecase.pessoa.BuscarListagemPessoasOutput;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,8 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 @RestController
 @RequestMapping("/dados/pessoas")
-public class DadosPessoaController {
+public class PessoaController {
 
+	@Autowired
 	private final BuscarListagemPessoasUseCase buscarListagemPessoasUseCase;
 	@GetMapping
 	public ResponseEntity<BuscarListagemPessoasOutput> buscarListagemPessoas() {

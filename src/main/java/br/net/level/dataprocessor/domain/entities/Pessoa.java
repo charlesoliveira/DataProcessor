@@ -46,7 +46,7 @@ public class Pessoa implements Serializable {
 
 	private String endereco;
 
-	private String numero;
+	private Integer numero;
 
 	private String bairro;
 
@@ -58,7 +58,7 @@ public class Pessoa implements Serializable {
 
 	private String celular;
 
-	private Integer altura;
+	private Double altura;
 
 	private Integer peso;
 

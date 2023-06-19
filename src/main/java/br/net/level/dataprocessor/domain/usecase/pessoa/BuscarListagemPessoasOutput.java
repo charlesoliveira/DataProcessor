@@ -11,21 +11,58 @@ import java.util.List;
 @Builder
 public class BuscarListagemPessoasOutput {
 
+	public String nome;
 
-	private List<Pessoa> pessoas;
+	public String cpf;
+
+	public String rg;
+
+	public String data_nasc;
+
+	public String sexo;
+
+	public String mae;
+
+	public String pai;
+
+	public String email;
+
+	public String cep;
+
+	public String endereco;
+
+	public Integer numero;
+
+	public String bairro;
+
+	public String cidade;
+
+	public String estado;
+
+	public String telefone_fixo;
+
+	public String celular;
+
+	public Double altura;
+
+	public Integer peso;
+
+	public String tipo_sanguineo;
+
+/*	public List<Pessoa> pessoas;
 
 
 	@Builder
 	@Data
-	private static class PessoaOutput {
+	public static class PessoaOutput {
 
-		private String nome;
+		public String nome;
 
-		private String email;
+		public String email;
 
-		private String estado;
+		public String estado;
 
-		private String celular;
-	}
+		public String celular;
+	}*/
 
 }

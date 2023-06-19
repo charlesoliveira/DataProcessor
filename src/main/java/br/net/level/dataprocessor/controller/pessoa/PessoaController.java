@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @AllArgsConstructor
 @RestController
 @RequestMapping("/dados/pessoas")
@@ -18,8 +20,8 @@ public class PessoaController {
 	@Autowired
 	private final BuscarListagemPessoasUseCase buscarListagemPessoasUseCase;
 	@GetMapping
-	public ResponseEntity<BuscarListagemPessoasOutput> buscarListagemPessoas() {
-		BuscarListagemPessoasOutput output = buscarListagemPessoasUseCase.executar();
+	public ResponseEntity<List<BuscarListagemPessoasOutput>> buscarListagemPessoas() {
+		List<BuscarListagemPessoasOutput> output = buscarListagemPessoasUseCase.executar();
 		return new ResponseEntity<>(output, HttpStatus.OK);
 	}
 }

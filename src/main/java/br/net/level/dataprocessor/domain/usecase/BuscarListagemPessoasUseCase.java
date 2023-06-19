@@ -19,7 +19,7 @@ public class BuscarListagemPessoasUseCase {
 	@Autowired
 	private BuscarListagemPessoasOutputConverter outputConverter;
 
-	public BuscarListagemPessoasOutput executar() {
+	public List<BuscarListagemPessoasOutput> executar() {
 		List<Pessoa> listagem = iPessoaDataProvider.findAll();
 		return outputConverter.converter(listagem);
 	}

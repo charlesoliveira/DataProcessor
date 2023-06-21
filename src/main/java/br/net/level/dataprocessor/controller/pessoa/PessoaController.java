@@ -19,6 +19,7 @@ public class PessoaController {
 
 	@Autowired
 	private final BuscarListagemPessoasUseCase buscarListagemPessoasUseCase;
+
 	@GetMapping
 	public ResponseEntity<List<BuscarListagemPessoasOutput>> buscarListagemPessoas() {
 		List<BuscarListagemPessoasOutput> output = buscarListagemPessoasUseCase.executar();

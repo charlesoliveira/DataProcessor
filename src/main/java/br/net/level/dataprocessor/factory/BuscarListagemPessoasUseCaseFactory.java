@@ -18,6 +18,7 @@ public class BuscarListagemPessoasUseCaseFactory {
 
 	@Bean
 	public BuscarListagemPessoasOutputConverter criarBuscarListagemPessoasOutputConverter() {
-		return BuscarListagemPessoasOutputConverter.builder().build();
+		return BuscarListagemPessoasOutputConverter.builder()
+				.build();
 	}
 }

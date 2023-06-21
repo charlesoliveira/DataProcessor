@@ -1,6 +1,5 @@
 package br.net.level.dataprocessor.controller.pessoa;
 
-import br.net.level.dataprocessor.domain.entities.QtdUFDto;
 import br.net.level.dataprocessor.domain.usecase.BuscarListagemQtdUFUseCase;
 import br.net.level.dataprocessor.domain.usecase.qtduf.BuscarListagemQtdUFOutput;
 import lombok.AllArgsConstructor;
@@ -19,9 +18,10 @@ public class QtdUFController {
 
 	@Autowired
 	private final BuscarListagemQtdUFUseCase buscarListagemQtdUFUseCase;
+
 	@GetMapping
-	public ResponseEntity<List<QtdUFDto>> buscarListagemQtdUF() {
-		List<QtdUFDto> output = buscarListagemQtdUFUseCase.executar();
+	public ResponseEntity<List<BuscarListagemQtdUFOutput>> buscarListagemQtdUF() {
+		List<BuscarListagemQtdUFOutput> output = buscarListagemQtdUFUseCase.executar();
 		return new ResponseEntity<>(output, HttpStatus.OK);
 	}
 }
